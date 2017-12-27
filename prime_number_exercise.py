@@ -9,12 +9,8 @@ def prime_number_check(x):
 
 # return the sum of the primes
 def prime_number_sum(x):
-    primes = []
-    for i in range(2,10 * x + x * x * x):
-        if prime_number_check(i):
-            primes.append(i)
-            a = sum(primes)
-    return a
+    primes = [i for i in range(2,10 * x + x * x * x) if prime_number_check(i)]
+    return sum(primes)
 
 
 
